@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input id="myButton1234" type="button" value="Use GPU math" style="visibility:visible;" onclick="{
+                                                                                                                                   
+    //const myA =  tf.scalar(6.1434, 'float32')
+    const myA = tf.tensor1d([10,20,30], 'int32')
+    const myB = tf.scalar(2.1, 'float32')
+    const myResult = tf.add(myA, myB);
+    //document.getElementById('myDiv1234').innerHTML 
+    //= myResult.dataSync()[0].toFixed(2)  
+    
+    let myArray = Array.from(myResult.dataSync());
+    let result2 = myArray.map(a => a.toFixed(2));
+    document.getElementById('myDiv1234').innerHTML = result2 
+                                                                   
+  }"><br><br>
+  <div id='myDiv1234'>...</div><br>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0"> </script>
+</body>
+
+</html>

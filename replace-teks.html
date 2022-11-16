@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div id="result" style="border: 1px solid red;">
+(Klik tombol "Click Me" untuk me-replace teks ini)
+</div>
+<input type=button value="Click Me" onClick="change_content('result')">
+
+<script>
+function change_content(id) {
+ var string = 'jQuery - Pemrograman Web';
+ $('#'+id).text(string);
+}
+</script>
+
+</body>
+</html>
